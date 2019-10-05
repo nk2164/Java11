@@ -1,4 +1,4 @@
-package com.d84u.basics;
+package com.nk2164.basics;
 
 public class TestClass {
 

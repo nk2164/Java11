@@ -1,4 +1,4 @@
-package com.d84u.basics;
+package com.nk2164.basics;
 
 public class OuterClass {
 
@@ -17,6 +17,8 @@ public class OuterClass {
 
 	  }
 
+	  // Inner reference types 
+	  
 	  class InnerClass {
 	    String text = "Hi from inner class";
 
