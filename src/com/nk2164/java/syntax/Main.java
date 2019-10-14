@@ -82,7 +82,7 @@ public class Main {
 //
 //		System.out.println("Total : " + total);
 //		System.out.println("numberUsed : " + numberUsed);
-		
+
 //		String myName = "Johnny Ive";
 //		int spacePosition = myName.indexOf(" ");
 //		System.out.println(spacePosition);
@@ -91,7 +91,7 @@ public class Main {
 //		
 //		String myFirstName = myName.substring(0, spacePosition).toUpperCase();
 //		System.out.println(myFirstName);
-		
+
 //		int i = 6;
 //		
 //		System.out.println("Starting");
@@ -105,7 +105,7 @@ public class Main {
 //		}
 //		
 //		System.out.println("Ending");
-		
+
 //		int i = 7;
 //		
 //		switch (i) {
@@ -119,7 +119,7 @@ public class Main {
 //			System.out.println("It must be something else!");
 //			break;
 //		}
-		
+
 //		int dayNumber = 1;
 //		
 //		switch (dayNumber) {
@@ -136,19 +136,56 @@ public class Main {
 //			System.out.println("another day");
 //			break;
 //		}
+
+////		int first = 7;
+//		int first = 8;
+//		int second = 7;
+//		
+////		if (second > first && first == 7) {
+//		if (second > first || first == 7) {
+////			System.out.println("both are true!");
+//			System.out.println("either are true!");
+//		} else {
+////			System.out.println("at least one is false!");
+//			System.out.println("both are false!");
+//		}
+
+//		String myName = "John Doe";
+//		String yourName = "John Bankside";
+//		
+//		String myFirstName = myName.substring(0, 4);
+//		String yourFirstName = yourName.substring(0, 4);
+//		
+//		System.out.println(myFirstName);
+//		System.out.println(yourFirstName);
 		
-//		int first = 7;
-		int first = 8;
-		int second = 7;
+//		if (myFirstName == yourFirstName) {
+//			System.out.println("We have the same name!");
+//		} else {
+//			System.out.println("Our names are different!");
+//		}
 		
-//		if (second > first && first == 7) {
-		if (second > first || first == 7) {
-//			System.out.println("both are true!");
-			System.out.println("either are true!");
-		} else {
-//			System.out.println("at least one is false!");
-			System.out.println("both are false!");
-		}
+		// use equals method for comparing strings.
+		
+//		if (myFirstName.equalsIgnoreCase(yourFirstName)) {
+//			System.out.println("We have the same name!");
+//		} else {
+//			System.out.println("Our names are different!");
+//		}
+		
+//		int i = 8;
+//		int j;
+//		
+//		if (i == 7) {
+//			j = 1;
+//		} else {
+//			j = 2;
+//		}
+		
+		// Ternary operation.
+//		j = (i == 7) ? 1 : 2;
+//		
+//		System.out.println(j);
 		
 	}
 
