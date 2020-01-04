@@ -14,19 +14,38 @@ public class TestClass1 {
 //		System.out.println(a);
 //		System.out.println("Hello" + newline + "World");
 		
-		byte b = 10; // b is 8 bits 
-		char c = 'x'; // c is 16 bits 
-		short s = 300; // c is 16 bits 
-		int i; // i is 32 bits 
-		long l; // l is 64 bits 
-		float f;// f is 32 bits 
-		double d; // d is 64 bits 
+//		byte b = 10; // b is 8 bits 
+//		char c = 'x'; // c is 16 bits 
+//		short s = 300; // c is 16 bits 
+//		int i; // i is 32 bits 
+//		long l; // l is 64 bits 
+//		float f;// f is 32 bits 
+//		double d; // d is 64 bits 
+//		
+//		i = b; 
+//		i = s; 
+//		l = i; 
+//		f = i; 
+//		d = f;
 		
-		i = b; 
-		i = s; 
-		l = i; 
-		f = i; 
-		d = f; 
+		int i = 10; 
+		char c = (char) i; // explicitly casting i to char 
+		long l = 100; 
+		i = (int) l; // explicitly casting l to int 
+		byte b = (byte) i; // explicitly casting i to byte 
+		double d = 10.0; 
+		float f = (float) d; // explicitly casting d to float
+
+		 
+		
+//		final int i = 10;
+//		byte j = i;
+//		
+//		someMethod(i);
 	
+	}
+	
+	public static void someMethod(byte j) {
+		System.out.println(j);
 	}
 }
