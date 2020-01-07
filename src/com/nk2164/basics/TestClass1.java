@@ -12,9 +12,9 @@ public class TestClass1 {
 		}
 		
 		{
-			int i = 0;
+			int inti = 0; 
 		}
-		
+				
 		String name = "bob";
 		System.out.println(name);
 		int i = -1;
