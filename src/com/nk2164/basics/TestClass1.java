@@ -2,23 +2,17 @@ package com.nk2164.basics;
 
 public class TestClass1 {
 
-	private String name;
-	
-	public static void main(final String[] args) {
+	Object instanceVar;
 
-		for (int i = 0; i < 2; i++) {
-			String name = "john";
-			System.out.println(name);
-		}
-		
-		{
-			int inti = 0; 
-		}
-				
-		String name = "bob";
-		System.out.println(name);
-		int i = -1;
+	public TestClass1(Object methodParam) {
+		instanceVar = methodParam;
+	}
 
+	public static void main(String[] args) {
+		Object tempVar = new Object(); // 1
+		TestClass1 tc = new TestClass1(tempVar); // 2
+		tempVar = new Object(); // 3
+		tc.instanceVar = null; // 4
 	}
 
 }
