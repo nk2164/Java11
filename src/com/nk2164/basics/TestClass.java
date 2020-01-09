@@ -25,8 +25,15 @@ public class TestClass {
 //		System.out.println(str1 == str2);
 //		System.out.println(str1 == str3);
 		
-		System.out.println("abc".toUpperCase());
-		System.out.println("abc".toLowerCase());
+
+		
+		String s1 = "abc";
+		String s2 = " abc".stripLeading();
+		
+		System.out.println(s1);
+		System.out.println(s2);
+		
+		System.out.println(s1 == s2);
 	}
 
 	public void method() {
