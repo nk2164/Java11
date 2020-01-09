@@ -19,11 +19,14 @@ public class TestClass {
 //		System.out.println(i);
 //		addCount(1);
 		
-		String str1 = "Hello";
-		String str2 = new String("Hello");
-		String str3 = str2.intern();
-		System.out.println(str1 == str2);
-		System.out.println(str1 == str3);
+//		String str1 = "Hello";
+//		String str2 = new String("Hello");
+//		String str3 = str2.intern();
+//		System.out.println(str1 == str2);
+//		System.out.println(str1 == str3);
+		
+		System.out.println("abc".toUpperCase());
+		System.out.println("abc".toLowerCase());
 	}
 
 	public void method() {
