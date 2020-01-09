@@ -14,10 +14,16 @@ public class TestClass {
 //		}
 //		x = 20;// unreachable code here but no compilation error
 		
-		b = new Bird();
-		System.out.println(b.s);
-		System.out.println(i);
-		addCount(1);
+//		b = new Bird();
+//		System.out.println(b.s);
+//		System.out.println(i);
+//		addCount(1);
+		
+		String str1 = "Hello";
+		String str2 = new String("Hello");
+		String str3 = str2.intern();
+		System.out.println(str1 == str2);
+		System.out.println(str1 == str3);
 	}
 
 	public void method() {
