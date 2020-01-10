@@ -27,11 +27,11 @@ public class TestClass {
 		
 
 		
-		String s1 = "abc";
-		String s2 = " abc".stripLeading();
+		StringBuilder s1 = new StringBuilder("abc");
+		StringBuilder s2 = new StringBuilder(" abc".stripLeading());
 		
-		System.out.println(s1);
-		System.out.println(s2);
+		System.out.println(s1.toString());
+		System.out.println(s2.toString());
 		
 		System.out.println(s1 == s2);
 	}
