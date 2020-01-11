@@ -37,10 +37,16 @@ public class TestClass {
 //		
 //		System.out.println(s1 == s2);
         
-        StringBuilder sb = new StringBuilder("Hello ");
-        sb.append(true).append(12.3).append(b);
-        
-        System.out.println(sb);
+//        StringBuilder sb = new StringBuilder("Hello ");
+//        sb.insert(7, "World!");
+//        
+//        System.out.println(sb);
+		
+		StringBuilder sb = new StringBuilder("01234");
+		sb.replace(1,3, "abcd");
+		System.out.println(sb);
+		sb.delete(1,3);
+		System.out.println(sb);
 	}
 
 	public void method() {
