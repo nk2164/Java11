@@ -25,15 +25,16 @@ public class TestClass {
 //		System.out.println(str1 == str2);
 //		System.out.println(str1 == str3);
 		
-
-		
-		StringBuilder s1 = new StringBuilder("abc");
-		StringBuilder s2 = new StringBuilder(" abc".stripLeading());
-		
-		System.out.println(s1.toString());
-		System.out.println(s2.toString());
-		
-		System.out.println(s1 == s2);
+        System.out.println(10 * 20 + "Java");
+        System.out.println("Java" + 10 * 20);
+//		
+//		StringBuilder s1 = new StringBuilder("abc");
+//		StringBuilder s2 = new StringBuilder(" abc".stripLeading());
+//		
+//		System.out.println(s1.toString());
+//		System.out.println(s2.toString());
+//		
+//		System.out.println(s1 == s2);
 	}
 
 	public void method() {
