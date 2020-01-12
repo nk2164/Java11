@@ -1,66 +1,25 @@
 package com.nk2164.basics;
 
+import java.util.Scanner;
+
 public class TestClass {
 
-	public static final boolean DEBUG = false;
-	
-	public static Bird b = new Bird();
-	public static int i = 20;
-	
-	public static void main(String[] args) throws Exception {
-		
-//		int x = 0;
-//		if (x == 0) {
-//			throw new Exception();
-//		}
-//		x = 20;// unreachable code here but no compilation error
-		
-//		b = new Bird();
-//		System.out.println(b.s);
-//		System.out.println(i);
-//		addCount(1);
-		
-//		String str1 = "Hello";
-//		String str2 = new String("Hello");
-//		String str3 = str2.intern();
-//		System.out.println(str1 == str2);
-//		System.out.println(str1 == str3);
-		
-//      System.out.println(10 * 20 + "Java");
-//      System.out.println("Java" + 10 * 20);
-//		
-//		StringBuilder s1 = new StringBuilder("abc");
-//		StringBuilder s2 = new StringBuilder(" abc".stripLeading());
-//		
-//		System.out.println(s1.toString());
-//		System.out.println(s2.toString());
-//		
-//		System.out.println(s1 == s2);
-        
-//        StringBuilder sb = new StringBuilder("Hello ");
-//        sb.insert(7, "World!");
-//        
-//        System.out.println(sb);
-		
-		StringBuilder sb = new StringBuilder("01234");
-		sb.replace(1,3, "abcd");
-		System.out.println(sb);
-		sb.delete(1,3);
-		System.out.println(sb);
-	}
+	public static void main(String[] args) {
 
-	public void method() {
-		if (DEBUG) {
-			System.out.println(" debug statement here");
-		} // works
-	}
-
-	public static int count = 20;
-	
-	public static int addCount(int x) {
-		final int count = 1;
-		System.out.println(count);
-		return 0;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the string ");
+		String inputString = sc.nextLine();
+		
+		if (inputString.length() > 4) {
+			String allExceptLast4 = inputString.substring(0, inputString.length()-4);
+			String repeatString = "X".repeat(allExceptLast4.length());
+			repeatString +=  inputString.substring(inputString.length()-4);
+			System.out.println(repeatString);
+		}
+		else {
+			System.out.println("Entered string must be greater than 4.");
+		}
+		
 	}
 
 }
