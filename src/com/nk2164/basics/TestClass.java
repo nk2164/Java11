@@ -19,10 +19,16 @@ public class TestClass {
 //		System.out.println(Integer.toBinaryString(b3));
 //		System.out.println(b3);
 		
-		int i = 1; 
-		i = i++; 
-		System.out.println(i);
-
+//		int i = 1; 
+//		i = i++; 
+//		System.out.println(i);
+		
+		Double d = 1.0;
+		String s = "2";
+		
+		String s3 = d + s;
+		
+		System.out.println(s3);
 	}
 
 }
