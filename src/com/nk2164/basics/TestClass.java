@@ -14,7 +14,7 @@ public class TestClass {
 		}
 
 		System.out.println(x);
-		
+
 		String y;
 		System.out.println(y = (x == 3) ? "First" : "second");
 	}
