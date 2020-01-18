@@ -1,13 +1,13 @@
 package com.nk2164.basics;
 
-public class Account extends AccountParent {
+public class AccountParent {
 	private String accountNumber;
 	
-	public Account() {
+	public AccountParent() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Account(String accountNumber) {
+	public AccountParent(String accountNumber) {
 		this.accountNumber = accountNumber;
 	}
 	
