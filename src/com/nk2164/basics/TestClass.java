@@ -30,12 +30,16 @@ public class TestClass {
 //			System.out.println(act.toString());
 //		}
 		
-//		// same code above with for each
-//		for (Account act : ba) {
-//			System.out.println(act.toString());
-//		}
+		// same code above with for each
+		for (Account act : ba) {
+			System.out.println(act.toString());
+			if (act.equals(act3)) {
+				System.out.println("I'm out after acount 13");
+				break;
+			}
+		}
 		
-		ba.forEach(System.out :: println);
+//		ba.forEach(System.out :: println);
 	}
 
 	public static void doStuff1() {
