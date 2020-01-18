@@ -23,10 +23,15 @@ public class TestClass {
 		ba.addAccount(act3);
 		ba.addAccount(act4);
 		
-		Iterator<Account> baIterator = ba.iterator();
-		Account act;
-		while(baIterator.hasNext()) {
-			act = baIterator.next();
+//		Iterator<Account> baIterator = ba.iterator();
+//		Account act;
+//		while(baIterator.hasNext()) {
+//			act = baIterator.next();
+//			System.out.println(act.toString());
+//		}
+		
+		// same code above with for each
+		for (Account act : ba) {
 			System.out.println(act.toString());
 		}
 	}
