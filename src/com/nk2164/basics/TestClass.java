@@ -6,50 +6,46 @@ public class TestClass {
 
 	public static void main(String[] args) {
 
-		doStuff();
-
-		int a = 0, b = 0, c = 10, d = 0;
-
-		boolean flag = true;
-
-		if (a == b)
-
-			if (c == 10) {
-				if (d > a) {
-				} else {
-				}
-
-				if (flag)
-					System.out.println("I came here");
-				else
-					System.out.println("No i came here");
-			} else if (flag == false)
-				System.out.println("");
-			else if (a + b < d) {
-				System.out.println("");
-			} else
-				System.out.println("");
-		else
-			d = b;
-
+//		doStuff1();
+//		dostuff2();
+//		doWhile();
+		myForLoop();
 	}
 
-	public static void doStuff() {
-		while (count > 0) {
-			switch (count) {
-			case 0:
-			case 1:
-			case 2:
-			case 3:
-			case 4:
-			case 5:
-				sum += count--;
-				break;
-			default:
-				break;
-			}
+	public static void doStuff1() {
+		int i = 4;
+
+		while (i > 0) {
+			i--;
+			System.out.println(" i is " + i);
 		}
-		System.out.println("Sum is " + sum);
+
+		System.out.println(" Value of i after the loop is " + i);
+	}
+	
+	private static void dostuff2() {
+		int i = 4; 
+		
+		while(i-- > 0) System.out.println(" i is "+ i); // no curly braces 
+		
+		System.out.println(" Value of i after the loop is "+ i); 
+	}
+	
+	static private void doWhile() {
+		int i = 4; 
+		
+		do System.out.println(" i is "+ i); 
+		while( i--> 0); 
+		
+		System.out.println(" Loop finished. i is "+ i);
+	}
+	
+	static private void myForLoop() {
+		int i = 4;
+		
+		for (System.out.println("Starting loop now"); i > 0; System.out.println(i),i--);
+		
+		System.out.println("Loop finished. i is "+ i);
 	}
 
 }
