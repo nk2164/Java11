@@ -24,12 +24,19 @@ public class TestClass {
 		ba.addAccount(act3);
 		ba.addAccount(act4);
 
+		Account act = null;
+		for (Iterator<Account> baIt = ba.iterator();baIt.hasNext(); ) {
+			act = baIt.next();
+			System.out.println(act);
+		}
 //		Iterator<Account> baIterator = ba.iterator();
 //		Account act;
 //		while(baIterator.hasNext()) {
 //			act = baIterator.next();
 //			System.out.println(act.toString());
 //		}
+		
+		
 
 		// same code above with for each
 //		for (Account act : ba) {
@@ -42,28 +49,28 @@ public class TestClass {
 
 //		ba.forEach(System.out :: println);
 
-		String[][] groups = { { "ally", "bob", "charlie" }, { "bob", "alice", "boone" }, { "chad", "dave", "elliot" } };
-
-		MY_OUTER_LOOP: for (int i = 0; i < groups.length; i++) {
-			for (String name : groups[i]) {
-				System.out.println("Checking " + name);
-				if ("bob".equals(name)) {
-					System.out.println("Found bob in Group " + (i + 1) + " " + Arrays.toString(groups[i]));
-					continue MY_OUTER_LOOP;
-				}
-			}
-		}
-
-		String[] ary1 = { "one", "two", "three" };
-		LABEL_1: for (String s : ary1)
-			System.out.println(s); // usage of LABEL_1 is valid here.
-
-		LABEL_2: for (int i = 0; i < 10; i++) {
-			if (i == 2)
-				continue LABEL_2; // usage of continue is invalid because LABEL_1 does 
-								  // not appear on a loop statement that contains this 
-								  // continue.	
-		}
+//		String[][] groups = { { "ally", "bob", "charlie" }, { "bob", "alice", "boone" }, { "chad", "dave", "elliot" } };
+//
+//		MY_OUTER_LOOP: for (int i = 0; i < groups.length; i++) {
+//			for (String name : groups[i]) {
+//				System.out.println("Checking " + name);
+//				if ("bob".equals(name)) {
+//					System.out.println("Found bob in Group " + (i + 1) + " " + Arrays.toString(groups[i]));
+//					continue MY_OUTER_LOOP;
+//				}
+//			}
+//		}
+//
+//		String[] ary1 = { "one", "two", "three" };
+//		LABEL_1: for (String s : ary1)
+//			System.out.println(s); // usage of LABEL_1 is valid here.
+//
+//		LABEL_2: for (int i = 0; i < 10; i++) {
+//			if (i == 2)
+//				continue LABEL_2; // usage of continue is invalid because LABEL_1 does 
+//								  // not appear on a loop statement that contains this 
+//								  // continue.	
+//		}
 	}
 
 	public static void doStuff1() {
