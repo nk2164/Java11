@@ -9,10 +9,13 @@ public class TriangularMatrix {
 					j + 2, (i + j + 2));
 		}
 
-		int[] ia[] = new int[10][10];
-		boolean[] ba = new boolean[3];
-		String[] stra = new String[5];
-		TestClass[] ta = new TestClass[5];
+		int[] ia = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }; // an array of ints of size 10
+		boolean[] ba = { true, false, false }; // an array of booleans of size 3
+		String[] stra = { " a", "b", "c", "d", "e" }; // an array of Strings of size 5
+		Account[] ta = { new Account(), new Account(), new Account(), new Account(), new Account() }; // an array of
+																										// MyClass
+																										// objects of
+																										// size 5
 
 		System.out.println(ia.getClass().getName() + " , " + ia.getClass().getSuperclass().getName());
 		System.out.println(ba.getClass().getName() + " , " + ba.getClass().getSuperclass().getName());
