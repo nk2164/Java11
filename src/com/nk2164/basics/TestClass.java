@@ -30,10 +30,12 @@ public class TestClass {
 //			System.out.println(act.toString());
 //		}
 		
-		// same code above with for each
-		for (Account act : ba) {
-			System.out.println(act.toString());
-		}
+//		// same code above with for each
+//		for (Account act : ba) {
+//			System.out.println(act.toString());
+//		}
+		
+		ba.forEach(System.out :: println);
 	}
 
 	public static void doStuff1() {
