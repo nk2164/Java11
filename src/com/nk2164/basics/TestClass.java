@@ -71,6 +71,16 @@ public class TestClass {
 //								  // not appear on a loop statement that contains this 
 //								  // continue.	
 //		}
+		
+		int[][][] iaaa = new int[][][] {new int[][]{new int[] {1,2,3},
+													new int[] {4,5,6},
+													new int[] {7,8,9}},
+									    new int[][]{new int[] {1,2,3},
+										     		new int[] {4,5,6},
+											    	new int[] {7,8,9}}};			
+												                     
+		
+		
 	}
 
 	public static void doStuff1() {
