@@ -22,6 +22,7 @@ public class TestClass1 {
 //	
 //	  doIt(5);
 
+		
 		Object[] iaa[][] = {{{" string is also an object"}}, 
 				           {{null}},
 				           {{new Object(), new Integer(10)}}};
