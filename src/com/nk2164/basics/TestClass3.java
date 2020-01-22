@@ -19,11 +19,11 @@ public class TestClass3 {
 			}
 		}
 		
-		System.out.println(average(new int[]{20,20,20,20,20}));
+		System.out.println(average(0,new int[]{20,20,20,20,20}));
 
 	}
 
-	public static double average(int...values) {
+	public static double average(int temp,int...values) {
 		/*
 		 * by the way, can you tell what will happen if sum is declared as int? Expect
 		 * questions in the exam that seem to be about one topic but are actually about
