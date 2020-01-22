@@ -46,4 +46,13 @@ public class TestClass3 {
 			sum += values[i];
 		return values.length == 0 ? 0 : sum / values.length;
 	}
+
+	static void doSomething(Integer i, short s) {
+		System.out.println(" 1");
+	}
+
+	static void doSomething(int in, Short s) {
+		System.out.println(" 1");
+	}
+
 }
