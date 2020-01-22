@@ -23,7 +23,7 @@ public class TestClass3 {
 
 	}
 
-	public static double average(int[] values) {
+	public static double average(int...values) {
 		/*
 		 * by the way, can you tell what will happen if sum is declared as int? Expect
 		 * questions in the exam that seem to be about one topic but are actually about
