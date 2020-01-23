@@ -1,8 +1,5 @@
 package com.nk2164.basics;
 
-import java.util.Arrays;
-import java.util.Iterator;
-
 public class TestClass4 {
 
 	public static void main(String[] args) {
