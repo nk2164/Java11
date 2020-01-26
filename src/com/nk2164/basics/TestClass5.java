@@ -1,48 +1,20 @@
 package com.nk2164.basics;
 
 public class TestClass5 {
-	
+
 	{
-		i = 30;
-	}
+	 printI(); // valid forward reference 
+	} 
 	
-	int i = 20;
+	void printI(){ 
+		System.out.println(i); 
+	} 
 	
-	public TestClass5() {
-		System.out.println("Constructor executed!");
-	}
-	
-
-	public static void main(String[] args) {
-		{
-			System.out.println("In main method!");
-			{
-			  System.out.println("One more");
-			  {
-				  System.out.println("Another one!");
-			  }
-			}
-
-		}
-
-		new TestClass5();
+	int i = 10;
+				
+	public static void main( String[] args){ 
 		
-		{
-			System.out.println("out side but inside main");
-		}
-		
-		System.out.println();
-		new TestClass5();
-	}
-
-	//Instance init block
-	{
-		System.out.println(i);  
-		System.out.println("Instance init executed!");
-	}
-	// static  init block
-	static {
-		System.out.println("Static init executed!");
-	}
+		System.out.println(new TestClass5().i);
+	} 
 
 }
