@@ -1,13 +1,17 @@
 package com.nk2164.basics;
 
-import java.util.Arrays;
-import java.util.Iterator;
-
 public class TestClass5 {
-
+	
+	{
+		i = 30;
+	}
+	
+	int i = 20;
+	
 	public TestClass5() {
 		System.out.println("Constructor executed!");
 	}
+	
 
 	public static void main(String[] args) {
 		{
@@ -33,6 +37,7 @@ public class TestClass5 {
 
 	//Instance init block
 	{
+		System.out.println(i);  
 		System.out.println("Instance init executed!");
 	}
 	// static init block
