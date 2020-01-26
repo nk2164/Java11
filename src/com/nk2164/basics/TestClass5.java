@@ -40,7 +40,7 @@ public class TestClass5 {
 		System.out.println(i);  
 		System.out.println("Instance init executed!");
 	}
-	// static init block
+	// static  init block
 	static {
 		System.out.println("Static init executed!");
 	}
