@@ -10,6 +10,11 @@ public class TestClass5 {
 	}
 
 	public static void main(String[] args) {
+		{
+			System.out.println("In main method!");
+		}
+		new TestClass5();
+		System.out.println();
 		new TestClass5();
 	}
 
