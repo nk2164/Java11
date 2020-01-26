@@ -14,5 +14,4 @@ public class TestClass4 {
 	public static void doStuff(Integer var) {
 		System.out.println("Auto boxed");
 	}
-	
 }
