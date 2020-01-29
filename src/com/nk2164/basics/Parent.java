@@ -6,8 +6,6 @@ public class Parent {
 	
 	static {
 		System.out.println("Count is initialized to " + count);
-		count = count + 10;
-		System.out.println("Added 10, Count is now " + count);
 	}
 
 }
