@@ -2,6 +2,7 @@ package com.nk2164.basics;
 
 public class Account extends AccountParent {
 	private String accountNumber;
+	protected String accountID;
 	
 	public Account() {
 		// TODO Auto-generated constructor stub
