@@ -12,8 +12,8 @@ public class HRAccount extends Account {
 		HRAccount hrAccount = new HRAccount();
 		hrAccount.accountID = "100";
 		
-		SubAccount subaccnt = new SubAccount();
-//		subaccnt.accountID = "123";
+		HRAccount subaccnt = new SubAccount();
+		subaccnt.accountID = "123";
 	}
 
 }
