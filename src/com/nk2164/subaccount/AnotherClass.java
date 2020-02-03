@@ -2,7 +2,7 @@ package com.nk2164.subaccount;
 
 import com.nk2164.basics.Account;
 
-public class AnotherClass {
+public class AnotherClass extends SubAccount {
 
 	public static void main(String[] args) {
 		SubAccount sa = new SubAccount();
