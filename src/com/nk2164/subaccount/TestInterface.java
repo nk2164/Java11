@@ -2,6 +2,8 @@ package com.nk2164.subaccount;
 
 public interface TestInterface {
 
+	public static final int COUNT = 0;
+	
 	public void aMethod();
 	
 	//private methods are ok as long as they are not abstract.
