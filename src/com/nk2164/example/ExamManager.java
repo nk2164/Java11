@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.function.DoubleSupplier;
 import java.util.function.ToDoubleFunction;
+import java.util.stream.Collectors;
 
 public class ExamManager {
 
@@ -41,6 +42,16 @@ public class ExamManager {
 		});
 
 		myScores.forEach(s -> System.out.println(s));
+	}
+	
+	public double geTotalOfAllScores() {
+		
+		return myScores.stream().reduce(0d,(a,b) -> a+b);
+		
+	}
+	
+	public List<Double> doubleAllScores() {
+		return myScores.stream().map(s -> 2*s).collect(Collectors.toList());
 	}
 
 }

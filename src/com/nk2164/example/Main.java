@@ -43,6 +43,14 @@ public class Main {
 		System.out.println("Trying out inline input " + examManager.returnVal(() -> {return 2.3d;}));
 		
 		examManager.printScores();
+		
+		System.out.println();
+		
+		System.out.println(examManager.geTotalOfAllScores());
+		
+		System.out.println();
+		List<Double> doubleScores = examManager.doubleAllScores();
+		doubleScores.forEach(s -> System.out.println(s));
 	}
 
 }

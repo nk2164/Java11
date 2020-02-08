@@ -19,12 +19,14 @@ public class FunctionTest1 {
 	}
 	
 	private void printMe(Predicate<Double> testCriteria) {
+
+		myList.stream().filter(testCriteria).forEach(s -> System.out.println(s));
 		
-		myList.forEach(s -> {
-			if (testCriteria.test(s)) {
-				System.out.println(s);
-			}
-		});
+//		myList.forEach(s -> {
+//			if (testCriteria.test(s)) {
+//				System.out.println(s);
+//			}
+//		});
 	}
 	
 	public static void main(String[] args) {
