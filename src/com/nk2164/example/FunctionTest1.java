@@ -31,6 +31,6 @@ public class FunctionTest1 {
 		FunctionTest1 f1 = new FunctionTest1();
 		f1.printMe(s -> s > 10.00);
 		System.out.println();
-		f1.printMe(s -> s > 50.00);
+		f1.printMe(s -> s >= 50.00);
 	}
 }
