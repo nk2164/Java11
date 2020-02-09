@@ -21,4 +21,19 @@ public interface Movable {
 	static void sayHello() {
 		System.out.println("Hello World!!");
 	}
+	
+	default void move(int n) {
+		while(n-- > 0) {
+			moveInternal();
+		}
+	}
+	private void moveInternal() {
+		System.out.println("I am moving!!");
+	}
+	
+	class Class1 {
+		void method1() {
+			System.out.println("printing from method1 in class1");
+		}
+	}
 }
