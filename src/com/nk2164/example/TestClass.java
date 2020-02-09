@@ -1,18 +1,12 @@
 package com.nk2164.example;
 
-public class TestClass {
+class TestClass {
 	public static void main(String[] args) {
-		Person p = new Person();
-		Employee e = new Employee();
-		
-		p.name = "Amy";
-		e.name = "Betty";
-		
-		System.out.println(p.name);
-		System.out.println(e.name);
-		
-		Employee.personCount = 2;
-		System.out.println(Person.personCount);
-		System.out.println(Employee.personCount);
+		InterestCalculator ic = new InterestCalculator();
+		double interest = ic.computeInterest(100, 2, 0.1);
+		System.out.println(interest); // prints 20.0 
+		ic = new CompoundInterestCalculator(); 
+		interest = ic.computeInterest( 100, 2, 0.1);
+		System.out.println( interest); // prints 21.0
 	}
 }

@@ -1,11 +1,7 @@
 package com.nk2164.example;
 
 class InterestCalculator {
-
-	Number computeInterest(double principle, double yrs, double rate) throws Exception {
-		if (yrs < 0)
-			throw new IllegalArgumentException(" yrs should be > 0");
+	public double computeInterest(double principle, int yrs, double rate) {
 		return principle * yrs * rate;
 	}
-	
 }
