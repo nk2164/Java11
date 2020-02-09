@@ -14,6 +14,12 @@ public class Hello {
 //		Now it knows all the string methods.
 		int i = ((String) o).length();
 		System.out.println(i);
+		
+		ClassB subClass = new ClassB();
+		System.out.println(subClass.count);
+		System.out.println(subClass.getCount());
+		System.out.println();
+		System.out.println(((ClassA) subClass).count); // unshadowing
+		System.out.println(((ClassA) subClass).getCount()); // unshadowing supertype
 	}
 }
-
