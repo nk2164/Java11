@@ -8,5 +8,7 @@ class TestClass {
 		ic = new CompoundInterestCalculator(); 
 		interest = ic.computeInterest( 100, 2, 0.1);
 		System.out.println( interest); // prints 21.0
+		
+		String x = "hello";
 	}
 }
