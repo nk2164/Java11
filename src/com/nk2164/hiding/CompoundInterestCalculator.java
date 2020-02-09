@@ -4,7 +4,8 @@ class CompoundInterestCalculator extends InterestCalculator {
 	public int yrs = 20;
 	public static double rate = 0.2;
 
-	public static String getClassName() {
+	@Override
+	public String getClassName() {
 		return "CompoundInterestCalculator";
 	}
 }

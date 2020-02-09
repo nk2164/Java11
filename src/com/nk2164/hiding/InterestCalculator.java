@@ -4,7 +4,7 @@ class InterestCalculator {
 	public int yrs = 10;
 	public static double rate = 0.1;
 
-	public static String getClassName() {
+	public String getClassName() {
 		return "InterestCalculator";
 	}
 }
