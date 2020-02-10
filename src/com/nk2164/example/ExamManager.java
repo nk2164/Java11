@@ -9,6 +9,10 @@ import java.util.stream.Collectors;
 
 public class ExamManager {
 
+	public boolean isItLowerThan50(Double d) {
+		return (d < 50);
+	}
+	
 	private List<Double> myScores;
 
 	public ExamManager() {

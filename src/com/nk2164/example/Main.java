@@ -51,6 +51,8 @@ public class Main {
 		System.out.println();
 		List<Double> doubleScores = examManager.doubleAllScores();
 		doubleScores.forEach(s -> System.out.println(s));
+		
+		
 	}
 
 }

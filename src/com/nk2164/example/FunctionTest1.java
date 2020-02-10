@@ -5,7 +5,10 @@ import java.util.List;
 import java.util.function.Predicate;
 
 public class FunctionTest1 {
-
+	public boolean isItLowerThan50(Double d) {
+		return (d < 50);
+	}
+	
 	List<Double> myList = new ArrayList<Double>();
 	
 	public FunctionTest1() {
@@ -34,5 +37,7 @@ public class FunctionTest1 {
 		f1.printMe(s -> s > 10.00);
 		System.out.println();
 		f1.printMe(s -> s >= 50.00);
+		System.out.println();
+		f1.printMe(f1::isItLowerThan50);
 	}
 }
