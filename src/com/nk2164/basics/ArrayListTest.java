@@ -16,11 +16,7 @@ public class ArrayListTest {
 		ls.add("six");
 		ls.add("seven");
 		
-		System.out.println(ls.size());
-		List<String> subL = ls.subList(8, 8);
+		List<String> subL = ls.subList(1, 3);
 		System.out.println(subL);
-		
-		String[] strArray = ls.toArray(new String[10]);
-		System.out.println(strArray.length);
 	}
 }
