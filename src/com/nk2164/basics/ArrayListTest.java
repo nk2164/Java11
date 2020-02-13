@@ -25,7 +25,9 @@ public class ArrayListTest {
 //		origList.add("d"); - > Can't do this 
 //		copyList.add("d"); - > Can't do this
 		
-		System.out.println(origList);
-		System.out.println(copyList);
+		ls.forEach(System.out::println);
+		origList.forEach(System.out::println);
+		copyList.forEach(System.out::println);
+		
 	}
 }
