@@ -18,5 +18,11 @@ public class ArrayListTest {
 		
 		List<String> subL = ls.subList(1, 3);
 		System.out.println(subL);
+		
+		List<String> origList = List.of("a", "b", "c");
+		List<String> copyList = List.copyOf(origList);
+		copyList.add("d");
+		System.out.println(origList);
+		System.out.println(copyList);
 	}
 }
