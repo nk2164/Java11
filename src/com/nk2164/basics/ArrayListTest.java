@@ -6,10 +6,10 @@ import java.util.List;
 public class ArrayListTest {
 
 	public static void main(String[] args) {
-		List<String> ls = new ArrayList<>();
-		ls.add(null);
-		ls.add("Hello");
-		ls.removeAll(ls);
-		System.out.println(ls.size());
+		List<Integer> li = new ArrayList<>();
+		li.add(0, 1);
+		li.add(0, 2);
+		li.add(0, 3);
+		System.out.println(li);
 	}
 }
