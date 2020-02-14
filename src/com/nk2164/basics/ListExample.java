@@ -21,12 +21,12 @@ public class ListExample {
 		
 		Map<Integer, String>  studentDetail = new HashMap<>();
 		studentDetail.put(1, "AB");
-		studentDetail.put(2, "CD");
-		studentDetail.put(3, "EF");
-		studentDetail.put(4, "GH");
-		studentDetail.put(5, "IJ");
-		studentDetail.put(6, "KL");
+		studentDetail.put(1, "CD");
+		studentDetail.put(1, "EF");
+		studentDetail.put(1, "GH");
+		studentDetail.put(1, "IJ");
+		studentDetail.put(1, "KL");
 		
-		System.out.println(studentDetail.get(5));
+		System.out.println(studentDetail.get(0));
 	}
 }
