@@ -6,11 +6,16 @@ public class ListExample {
 
 	public static void main(String[] args) {
 
-		ArrayList<String> al = new ArrayList<>();
-		al.add("a");
-		al.add("b");
-		al.add(al.size()+1,"x");
-		System.out.println(al);
+		var list1 = new ArrayList <String>(); 
+		var list2 = new ArrayList <String>(); 
+		
+		list1.add("a"); list1. add("b"); 
+		list2.add("b"); list2. add("c"); list2.add("d"); 
+		
+		list1.addAll(list2); 
+		list1.remove("b"); 
+		System.out.println( list1);
+
 
 	}
 }
