@@ -14,8 +14,7 @@ public class ListExample {
 		list2.add("c");
 		list2.add("d");
 		list1.addAll(list2);
-		System.out.println(list1);
-		list1.remove("b");
+//		list1.removeAll("b"); - Remove all takes only collection
 		System.out.println(list1);
 
 	}
