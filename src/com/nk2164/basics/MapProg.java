@@ -2,6 +2,8 @@ package com.nk2164.basics;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class MapProg {
 
@@ -15,6 +17,8 @@ public class MapProg {
 		map1.put(1, "Jean");
 		
 		System.out.println(map1.get(1));
+		
+		Set<Integer> ks = new TreeSet<>();
 		
 	}
 }
