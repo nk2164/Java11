@@ -12,9 +12,14 @@ public class TestClass {
 		List<Car> carsByCompany = cm.showCars(cf);
 		System.out.println(carsByCompany);
 		
+		cf = new PriceFilter(10000);
+		carsByCompany = cm.showCars(cf);
+		System.out.println(carsByCompany);
+		
 		System.out.println();
+
 		// Using lambda
-		carsByCompany = cm.showCars(c -> c.company.equals("Honda"));
+		carsByCompany = cm.showCars(c -> c.company.equals("Nissan"));
 		System.out.println(carsByCompany);
 		
 		carsByCompany = cm.showCars(c -> c.price > 10000);
@@ -80,6 +85,21 @@ class CompanyFilter implements CarFilter {
 	@Override
 	public boolean showCar(Car c) {
 		return company.equals(c.company);
+	}
+
+}
+
+
+class PriceFilter implements CarFilter {
+	private double price;
+
+	public PriceFilter(double p) {
+		this.price = p;
+	}
+
+	@Override
+	public boolean showCar(Car c) {
+		return c.price > price;
 	}
 
 }
