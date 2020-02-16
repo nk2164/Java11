@@ -1,29 +1,48 @@
 package com.nk2164.lambda.c1411;
 
 import java.util.*;
+import java.util.function.Predicate;
 
 public class TestClass {
 
 	public static void main(String[] args) {
 		CarMall cm = new CarMall();
-		
+
 		// Getting a list of cars without using lambda.
-		CarFilter cf = new CompanyFilter("Nissan");
+		Predicate<Car> cf = new CompanyFilter("Nissan");
 		List<Car> carsByCompany = cm.showCars(cf);
 		System.out.println(carsByCompany);
-		
+
 		cf = new PriceFilter(10000);
 		carsByCompany = cm.showCars(cf);
 		System.out.println(carsByCompany);
-		
+
 		System.out.println();
 
 		// Using lambda
 		carsByCompany = cm.showCars(c -> c.company.equals("Nissan"));
 		System.out.println(carsByCompany);
-		
+
 		carsByCompany = cm.showCars(c -> c.price > 10000);
 		System.out.println(carsByCompany);
+
+		Predicate<Car> p3 = c -> c.price > 16000;
+		Predicate<Car> p4 = c -> c.company.equals("Honda");
+		Predicate<Car> p5 = p3.and(p4);
+		Predicate<Car> p6 = p3.or(p4);
+
+		System.out.println();
+		carsByCompany = cm.showCars(p3.negate());
+		System.out.println(carsByCompany);
+
+		System.out.println();
+		carsByCompany = cm.showCars(p5);
+		System.out.println(carsByCompany);
+
+		System.out.println();
+		carsByCompany = cm.showCars(p6);
+		System.out.println(carsByCompany);
+
 	}
 }
 
@@ -42,7 +61,7 @@ class Car {
 
 	@Override
 	public String toString() {
-		return "(" + company + " " + year + ")";
+		return "(" + company + " " + year + "," + price + ")";
 	}
 }
 
@@ -57,12 +76,12 @@ class CarMall {
 		cars.add(new Car("Nissan", 2017, 8000.0, "SUV"));
 	}
 
-	List<Car> showCars(CarFilter cf) {
+	List<Car> showCars(Predicate<Car> cp) {
 
 		ArrayList<Car> carsToShow = new ArrayList<Car>();
 
 		for (Car c : cars) {
-			if (cf.showCar(c)) {
+			if (cp.test(c)) {
 				carsToShow.add(c);
 			}
 		}
@@ -71,11 +90,7 @@ class CarMall {
 
 }
 
-interface CarFilter {
-	boolean showCar(Car c);
-}
-
-class CompanyFilter implements CarFilter {
+class CompanyFilter implements Predicate<Car> {
 	private String company;
 
 	public CompanyFilter(String c) {
@@ -83,14 +98,13 @@ class CompanyFilter implements CarFilter {
 	}
 
 	@Override
-	public boolean showCar(Car c) {
+	public boolean test(Car c) {
 		return company.equals(c.company);
 	}
 
 }
 
-
-class PriceFilter implements CarFilter {
+class PriceFilter implements Predicate<Car> {
 	private double price;
 
 	public PriceFilter(double p) {
@@ -98,7 +112,7 @@ class PriceFilter implements CarFilter {
 	}
 
 	@Override
-	public boolean showCar(Car c) {
+	public boolean test(Car c) {
 		return c.price > price;
 	}
 
