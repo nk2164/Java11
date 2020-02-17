@@ -1,36 +1,32 @@
 package com.nk2164.basics;
 
 public class TestClass5 {
-	int id;
-	String name;
-	static int var1;
 
-	public TestClass5() {
-		id = 111;
-		name = "dummy";
-		var1 += 20;
+	{
+	 printI(); // valid forward reference 
+	} 
+
+	private TestClass5() {
+		// TODO Auto-generated constructor stub
 	}
-
-	void reset() {
-		// this(); // <-- LINE A
-		// TestClass5(); // <-- LINE B
-		// this = new TestClass5(); // <-- LINE C
-		// new TestClass5(); // <-- LINE D
-	}
-
-	public static void main(String[] args) {
-		System.out.println(TestClass5.var1);
-
-		TestClass5 a = new TestClass5();
-
-		System.out.println(TestClass5.var1);
-		new TestClass5();
-		System.out.println(a.var1);
+	
+	void printI(){ 
+		System.out.println(i); 
+	} 
+	
+	int i = 10;
+				
+	public static void main( String[] args){ 
 		
-		a.id = 2;
-		a.name = "amy";
-		a.reset();
-		System.out.println(a.id + ", " + a.name);
-	}
+		System.out.println(new TestClass5().i);
+		//new TestClass5Test(); - Wont compile
+	} 
 
+}
+
+class TestClass5Test {
+	
+	private TestClass5Test() {
+	}
+	
 }
