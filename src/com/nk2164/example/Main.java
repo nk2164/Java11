@@ -8,15 +8,6 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		ToDoubleFunction<List<Double>> averageCalculator = scores -> {
-			Double sum = 0d;
-
-			for (Double nextScore : scores) {
-				sum += nextScore;
-			}
-			return sum / scores.size();
-		};
-
 		ToDoubleFunction<List<Double>> highestScoreCalculator = scores -> {
 			Double highest = 0d;
 			for (Double nextScore : scores) {
