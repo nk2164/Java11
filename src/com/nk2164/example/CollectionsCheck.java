@@ -3,6 +3,8 @@ package com.nk2164.example;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
@@ -10,6 +12,10 @@ public class CollectionsCheck {
 
 	private List<Double> myScores;
 
+	public static boolean isItLowerThan50(Double d) {
+		return d <= 50;
+	}
+	
 	public CollectionsCheck() {
 		myScores = new ArrayList<Double>();
 		myScores.add(78.3);
@@ -29,6 +35,10 @@ public class CollectionsCheck {
 		return q.stream().reduce(0d, (a, b) -> a + b);
 	}
 	
+	public List<Double> printSelectedScore(Predicate<Double> p) {
+		return myScores.stream().filter(p).collect(Collectors.toList());
+	}
+	
 	public static List<Double> doubleMyScores(List<Double> q) {
 //		q.stream().mapToDouble(s -> 2*s).forEach(s -> q2.add(s));
 		
@@ -39,19 +49,22 @@ public class CollectionsCheck {
 
 	public static void main(String[] args) {
 		CollectionsCheck cs = new CollectionsCheck();
-
-		System.out.println(cs.myScores);
-
-		Collections.sort(cs.myScores, (arg0, arg1) -> {
-			return arg0 == arg1 ? 0 : (arg0 > arg1 ? -1 : 1);
-		});
-
-		System.out.println(cs.myScores);
-
-		cs.printAll(cs.myScores);
 		
-		System.out.println("The total of all scores is " + cs.getTotalAllScores(cs.myScores));
+//		cs.printAll(cs.myScores);
 		
-		System.out.println(doubleMyScores(cs.myScores));
+		cs.printSelectedScore(CollectionsCheck::isItLowerThan50).forEach(System.out::println);
+		
+//		System.out.println(cs.myScores);
+
+//		Collections.sort(cs.myScores, (arg0, arg1) -> {
+//			return arg0 == arg1 ? 0 : (arg0 > arg1 ? -1 : 1);
+//		});
+//
+//		System.out.println(cs.myScores);
+//
+//		
+//		System.out.println("The total of all scores is " + cs.getTotalAllScores(cs.myScores));
+//		
+//		System.out.println(doubleMyScores(cs.myScores));
 	}
 }
