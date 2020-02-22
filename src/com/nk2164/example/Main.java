@@ -44,6 +44,14 @@ public class Main {
 		
 		examManager.printScores();
 		
+		System.out.println("****");
+
+		examManager.printSelectedScores(examManager::isItLowerThan50);
+		
+		System.out.println("****");
+		
+		examManager.printScores();
+		
 		System.out.println();
 		
 		System.out.println(examManager.geTotalOfAllScores());

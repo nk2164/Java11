@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.function.DoubleSupplier;
+import java.util.function.Predicate;
 import java.util.function.ToDoubleFunction;
 import java.util.stream.Collectors;
 
@@ -48,6 +49,10 @@ public class ExamManager {
 		myScores.forEach(s -> System.out.println(s));
 	}
 	
+	public void printSelectedScores(Predicate<Double> testCriteria) {
+		myScores.stream().filter(testCriteria).forEach(s -> System.out.println(s));
+	}
+	
 	public double geTotalOfAllScores() {
 		
 		return myScores.stream().reduce(0d,(a,b) -> a+b);
@@ -58,4 +63,9 @@ public class ExamManager {
 		return myScores.stream().map(s -> 2*s).collect(Collectors.toList());
 	}
 
+	
+	private void printAllScores() {
+	   myScores.forEach(System.out::println);
+
+	}
 }
