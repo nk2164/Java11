@@ -26,7 +26,16 @@ public class Main {
 		};
 
 		ExamManager examManager = new ExamManager();
-		System.out.println("The average score is " + examManager.customCalculation(averageCalculator));
+		//System.out.println("The average score is " + examManager.customCalculation(averageCalculator));
+
+		System.out.println("The average score is " + examManager.customCalculation(s -> {
+			Double sum = 0d;
+			for (Double nextScore : s) {
+				sum += nextScore;
+			}
+			return sum / s.size();
+		}));
+
 		System.out.println("The highest score is " + examManager.customCalculation(highestScoreCalculator));
 		System.out.println("The first score is " + examManager.customCalculation(myScore -> myScore.get(0)));
 
@@ -40,27 +49,28 @@ public class Main {
 
 		System.out.println("The value from ds is " + examManager.returnVal(ds));
 		System.out.println("The value from db is " + examManager.returnVal(db));
-		System.out.println("Trying out inline input " + examManager.returnVal(() -> {return 2.3d;}));
-		
+		System.out.println("Trying out inline input " + examManager.returnVal(() -> {
+			return 2.3d;
+		}));
+
 		examManager.printScores();
-		
+
 		System.out.println("****");
 
 		examManager.printSelectedScores(examManager::isItLowerThan50);
-		
+
 		System.out.println("****");
-		
+
 		examManager.printScores();
-		
+
 		System.out.println();
-		
+
 		System.out.println(examManager.geTotalOfAllScores());
-		
+
 		System.out.println();
 		List<Double> doubleScores = examManager.doubleAllScores();
 		doubleScores.forEach(s -> System.out.println(s));
-		
-		
+
 	}
 
 }
