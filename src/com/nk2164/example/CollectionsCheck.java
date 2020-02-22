@@ -50,7 +50,9 @@ public class CollectionsCheck {
 	public static void main(String[] args) {
 		CollectionsCheck cs = new CollectionsCheck();
 		
-//		cs.printAll(cs.myScores);
+		cs.printAll(cs.myScores);
+		
+		System.out.println();
 		
 		cs.printSelectedScore(CollectionsCheck::isItLowerThan50).forEach(System.out::println);
 		
