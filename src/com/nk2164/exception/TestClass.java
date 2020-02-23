@@ -1,10 +1,19 @@
 package com.nk2164.exception;
 
+import java.io.FileNotFoundException;
+
 public class TestClass {
 
 	public static void main(String[] args) {
 		TestClass tc = new TestClass();
 		tc.doInterest();
+		
+		try {
+			throw new FileNotFoundException();
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+		}
 	}
 
 	private  void doInterest() {
