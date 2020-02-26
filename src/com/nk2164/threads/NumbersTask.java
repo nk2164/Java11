@@ -19,7 +19,7 @@ public class NumbersTask implements Runnable {
 			e.printStackTrace();
 		}
 		
-		System.out.println("Task " + Thread.currentThread().getName() + " has finished" );
+		System.out.println("Task " + Thread.currentThread().getName() + " has finished " );
 	}
 
 }
