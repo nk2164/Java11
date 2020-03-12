@@ -1,19 +1,23 @@
 package com.nk2164.basics;
 
-import java.util.ArrayList;
-import java.util.List;
+interface I1 {
+	default int someMethod() {
+		return 1;
+	}
+}
+
+interface I2 extends I1 {
+	default int someMethod() {
+		return 2;
+	}
+}
+
+class Class1 implements I1,I2 {
+}
 
 public class Test {
-
 	public static void main(String[] args) {
-		List<Integer> list = new ArrayList<>();
-		list.add(15);
-		list.add(25);
-		list.add(15);
-		list.add(25);
-		list.remove(Integer.valueOf(15));
-
-		System.out.println(list);
-		System.out.println(Integer.valueOf(15));
+		I1 obj = new Class1();
+		System.out.println(obj.someMethod());
 	}
 }
