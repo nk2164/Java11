@@ -1,26 +1,35 @@
 package com.nk2164.basics;
 
-interface I1 {
-	default int someMethod() {
-		return 1;
+interface Flyable {
+	
+	static int horizontalDegree() {
+		return 20;
 	}
-}
-
-interface I2 extends I1 {
-	default int someMethod() {
-		return 2;
+	
+	default void fly() {
+		System.out.println("Flying at " + horizontalDegree() + " degrees");
 	}
+
+	void land();
 }
 
-class Class1 implements I1,I2 {
-}
-
-public class Test {
-	public static void main(String[] args) {
-		I1 obj = new Class1();
-		System.out.println(obj.someMethod());
+public class Test implements Flyable {
+	
+	static int horizontalDegree() {
+		return 25;
+	}
+	
+	@Override
+	public void land() {
+		System.out.println("Landing at " + -Flyable.horizontalDegree() + " degress");
+		System.out.println("Landing at " + -Test.horizontalDegree() + " degress");
 		
-		System.out.println(Integer.valueOf('3'));
-		System.out.println(Integer.valueOf(3));
+	}
+	
+	public static void main(String[] args) {
+		new Test().fly();
+		new Test().land();
 	}
 }
+
+
