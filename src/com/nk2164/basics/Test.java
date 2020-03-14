@@ -1,35 +1,17 @@
 package com.nk2164.basics;
 
-interface Flyable {
-	
-	static int horizontalDegree() {
-		return 20;
-	}
-	
-	default void fly() {
-		System.out.println("Flying at " + horizontalDegree() + " degrees");
-	}
-
-	void land();
+import java.util.ArrayList;
+import java.util.List;
+ 
+public class Test {
+    public static void main(String[] args) {
+        List<Integer> list = new ArrayList<>();
+        list.add(51);
+        list.add(25);
+        list.add(15);
+        list.add(25);
+        list.remove(Integer.valueOf('3')); // CHAR '3' == 51 
+ 
+        System.out.println(list); // Will print [25, 15, 25]
+    }
 }
-
-public class Test implements Flyable {
-	
-	static int horizontalDegree() {
-		return 25;
-	}
-	
-	@Override
-	public void land() {
-		System.out.println("Landing at " + -Flyable.horizontalDegree() + " degress");
-		System.out.println("Landing at " + -Test.horizontalDegree() + " degress");
-		
-	}
-	
-	public static void main(String[] args) {
-		new Test().fly();
-		new Test().land();
-	}
-}
-
-
