@@ -19,5 +19,8 @@ public class Test {
 	public static void main(String[] args) {
 		I1 obj = new Class1();
 		System.out.println(obj.someMethod());
+		
+		System.out.println(Integer.valueOf('3'));
+		System.out.println(Integer.valueOf(3));
 	}
 }
