@@ -1,17 +1,20 @@
 package com.nk2164.basics;
 
-import java.util.ArrayList;
-import java.util.List;
- 
-public class Test {
-    public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>();
-        list.add(51);
-        list.add(25);
-        list.add(15);
-        list.add(25);
-        list.remove(Integer.valueOf('3')); // CHAR '3' == 51 
- 
-        System.out.println(list); // Will print [25, 15, 25]
-    }
+class Test {
+
+	public static void main(String[] args) {
+		for (var i = 1; i < 11; i++) {
+			System.out.println("Count is: " + i);
+		}
+
+		System.out.println();
+		
+		int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+		
+		for (var item : numbers) {
+			System.out.println("Count is: " + item);
+		}
+		
+//		var a = 2, b = 3; - will fail with message 'var' is not allowed in a compound declaration
+	}
 }
