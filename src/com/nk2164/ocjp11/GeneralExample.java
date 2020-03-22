@@ -47,12 +47,18 @@ public class GeneralExample {
 		doSomething(anotherLambda, "John", 10);
 		doSomething(anotherLambda, "Greg", 10);
 		
-		System.out.println(getTotal(new GeneralExample().books));
+		System.out.println("\nThe total is " + getTotal(new GeneralExample().books));
+		
+		System.out.println();
+		doubleAndPrint(new GeneralExample().books);
 	}
 	
 	public static Integer getTotal(List<Integer> books) {
 		
-		Stream<Integer> bookStream = books.stream();
-		return bookStream.reduce(0,(a,b) -> a+b);
+		return books.stream().reduce(0,(a,b) -> a+b);
+	}
+	
+	public static void doubleAndPrint(List<Integer> books) {
+		books.stream().map(s -> ("I doubled " + s + " to produce " + s*2)).forEach(s -> System.out.println(s));
 	}
 }
