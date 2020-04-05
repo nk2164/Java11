@@ -21,5 +21,7 @@ public class Hello {
 		System.out.println();
 		System.out.println(((ClassA) subClass).count); // unshadowing
 		System.out.println(((ClassA) subClass).getCount()); // unshadowing supertype
+		
+		float value = 102.0f;
 	}
 }
